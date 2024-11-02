@@ -1,6 +1,6 @@
 import 'package:evalution_note/admin/dashboard/admin_app_settings_screen.dart';
 import 'package:evalution_note/admin/dashboard/mange_user_screen.dart';
-import 'package:evalution_note/admin/dashboard/workout_content_screen.dart';
+import 'package:evalution_note/admin/dashboard/workout_content_mangement_screen.dart';
 import 'package:evalution_note/app_theme.dart';
 import 'package:flutter/material.dart';
 
