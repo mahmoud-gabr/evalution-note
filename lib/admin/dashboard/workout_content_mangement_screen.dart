@@ -10,7 +10,7 @@ class WorkoutContentManagementScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Workout Management'),
+        title: const Text('إدارة المحتوى التدريبي'),
         centerTitle: true,
         backgroundColor: AppTheme.primary,
       ),
@@ -20,7 +20,7 @@ class WorkoutContentManagementScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Workout Programs',
+              'برامج التمرين',
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     fontSize: 20,
                   ),
@@ -29,16 +29,16 @@ class WorkoutContentManagementScreen extends StatelessWidget {
               child: ListView(
                 children: const [
                   DeafultListTile(
-                    label: 'Beginner Workout',
+                    label: 'تمرين للمبتدئين',
                   ),
-                  DeafultListTile(label: 'Advanced Strength Training')
+                  DeafultListTile(label: 'تدريب القوة المتقدمة')
                 ],
               ),
             ),
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.add),
-              label: const Text('Add Workout Program'),
+              label: const Text('إضافة برنامج تمرين'),
               style: ElevatedButton.styleFrom(
                 iconColor: AppTheme.black,
                 foregroundColor: AppTheme.black,
@@ -47,7 +47,7 @@ class WorkoutContentManagementScreen extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             Text(
-              'Instructional Videos',
+              'فيديوهات تعليمية',
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     fontSize: 20,
                   ),
@@ -55,14 +55,14 @@ class WorkoutContentManagementScreen extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: const [
-                  DeafultListTile(label: 'Proper Squat Technique')
+                  DeafultListTile(label: 'تقنية القرفصاء الصحيحة')
                 ],
               ),
             ),
             ElevatedButton.icon(
               onPressed: () {},
               icon: const Icon(Icons.add),
-              label: const Text('Add Instructional Video'),
+              label: const Text('إضافة فيديو تعليمي'),
               style: ElevatedButton.styleFrom(
                 iconColor: AppTheme.black,
                 foregroundColor: AppTheme.black,

@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:evalution_note/admin/auth/admin_login.dart';
-import 'package:evalution_note/admin/dashboard/add_form_user_screen.dart';
+import 'package:evalution_note/admin/dashboard/add_user_form_screen.dart';
 import 'package:evalution_note/admin/dashboard/admin_app_settings_screen.dart';
 import 'package:evalution_note/admin/dashboard/admin_dashboard_screen.dart';
 import 'package:evalution_note/admin/dashboard/mange_user_screen.dart';
@@ -15,7 +17,6 @@ import 'package:evalution_note/trainer/home/trainer_home_screen.dart';
 import 'package:evalution_note/trainer/home/trainer_mange_video_screen.dart';
 import 'package:evalution_note/trainer/home/trainer_profile_screen.dart';
 import 'package:evalution_note/trainer/home/trainer_workout_screen.dart';
-import 'package:flutter/material.dart';
 
 void main() {
   runApp(const EvalutioNote());
@@ -28,6 +29,15 @@ class EvalutioNote extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      supportedLocales: const [
+        Locale('ar', ''), // Arabic
+      ],
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      locale: const Locale('ar'), // Set Arabic as the default language
       routes: {
         AdminLogin.id: (context) => const AdminLogin(),
         AdminDashboardScreen.id: (context) => const AdminDashboardScreen(),
@@ -50,7 +60,7 @@ class EvalutioNote extends StatelessWidget {
             const WorkoutProgramDesignScreen(),
         VideoManagementScreen.id: (context) => const VideoManagementScreen(),
       },
-      initialRoute: TrainerLoginScreen.id,
+      initialRoute: AdminLogin.id,
     );
   }
 }

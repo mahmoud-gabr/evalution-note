@@ -14,14 +14,13 @@ class WorkoutProgramDesignScreen extends StatefulWidget {
 
 class _WorkoutProgramDesignScreenState extends State<WorkoutProgramDesignScreen> {
   final TextEditingController programNameController = TextEditingController();
-
   final TextEditingController descriptionController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Design Workout Program'),
+        title: const Text('تصميم برنامج تدريبي'),
         backgroundColor: AppTheme.primary,
       ),
       body: Padding(
@@ -30,19 +29,19 @@ class _WorkoutProgramDesignScreenState extends State<WorkoutProgramDesignScreen>
           children: [
             DeafaultTextFormField(
               controller: programNameController,
-              label: 'Program Name',
+              label: 'اسم البرنامج',
             ),
             const SizedBox(height: 16),
             DeafaultTextFormField(
               controller: descriptionController,
-              label: 'Description',
+              label: 'الوصف',
               maxLines: 3,
             ),
             const SizedBox(height: 16),
             DeafaultElevetedBotton(
-              label: 'Save Program',
+              label: 'حفظ البرنامج',
               onPressed: () {
-                // Save program logic here
+                
               },
             ),
           ],

@@ -2,15 +2,15 @@ import 'package:evalution_note/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutPlanDetailScreen extends StatelessWidget {
-  static const  String id ='/WorkoutPlanDetailScreen'  ;
+  static const String id = '/WorkoutPlanDetailScreen';
 
-  const WorkoutPlanDetailScreen({super.key, });
+  const WorkoutPlanDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Workout Plan'),
+        title: const Text('خطة التمرين'),
         backgroundColor: AppTheme.primary,
         centerTitle: true,
       ),
@@ -20,15 +20,14 @@ class WorkoutPlanDetailScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Workout Plan: title",
+              "خطة التمرين: العنوان",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 16),
             Text(
-              "Details about the workout plan",
+              "تفاصيل عن خطة التمرين",
               style: Theme.of(context).textTheme.titleSmall,
             ),
-            
           ],
         ),
       ),

@@ -14,7 +14,7 @@ class TrainerHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Trainer Home'),
+        title: const Text('الصفحة الرئيسية للمدرب'),
         backgroundColor: AppTheme.primary,
       ),
       body: Container(
@@ -27,21 +27,21 @@ class TrainerHomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             DeafaultElevetedBotton(
-              label: 'Update Profile',
+              label: 'تحديث الملف الشخصي',
               onPressed: () {
                 Navigator.pushNamed(context, TrainerProfileScreen.id);
               },
             ),
             const SizedBox(height: 16),
             DeafaultElevetedBotton(
-              label: 'Design Workout Program',
+              label: 'تصميم برنامج تدريبي',
               onPressed: () {
                 Navigator.pushNamed(context, WorkoutProgramDesignScreen.id);
               },
             ),
             const SizedBox(height: 16),
             DeafaultElevetedBotton(
-              label: 'Manage Videos',
+              label: 'إدارة الفيديوهات',
               onPressed: () {
                 Navigator.pushNamed(context, VideoManagementScreen.id);
               },

@@ -9,7 +9,7 @@ class ViewVideosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Instructional Videos"),
+        title: const Text("فيديوهات تعليمية"),
         backgroundColor: AppTheme.primary,
         centerTitle: true,
       ),
@@ -20,7 +20,7 @@ class ViewVideosScreen extends StatelessWidget {
           return ListTile(
             contentPadding: EdgeInsets.zero,
             leading: const Icon(Icons.video_library),
-            title: Text("Video ${index + 1}"),
+            title: Text("فيديو ${index + 1}"),
             onTap: () {},
           );
         },

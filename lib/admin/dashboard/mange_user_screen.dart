@@ -1,4 +1,4 @@
-import 'package:evalution_note/admin/dashboard/add_form_user_screen.dart';
+import 'package:evalution_note/admin/dashboard/add_user_form_screen.dart';
 import 'package:evalution_note/app_theme.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,7 @@ class MangeUser extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('User Management'),
+        title: const Text('إدارة المستخدمين'),
         centerTitle: true,
         backgroundColor: AppTheme.primary,
       ),
@@ -29,14 +29,14 @@ class MangeUser extends StatelessWidget {
                 backgroundColor: AppTheme.green,
               ),
               icon: const Icon(Icons.add),
-              label: const Text('Add User'),
+              label: const Text('إضافة مستخدم'),
             ),
             Expanded(
               child: ListView(
                 children: [
                   ListTile(
                     contentPadding: EdgeInsets.zero,
-                    title: const Text('John Doe (Trainee)'),
+                    title: const Text(' احمد (متدرب)'),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -59,7 +59,7 @@ class MangeUser extends StatelessWidget {
                   ),
                   ListTile(
                     contentPadding: EdgeInsets.zero,
-                    title: const Text('Jane Smith (Trainer)'),
+                    title: const Text('محمد (مدرب) '),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [

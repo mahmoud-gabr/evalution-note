@@ -9,7 +9,7 @@ class TrackProgressScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Track Progress"),
+        title: const Text("تتبع التقدم"),
         backgroundColor: AppTheme.primary,
         centerTitle: true,
       ),
@@ -17,10 +17,12 @@ class TrackProgressScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text("Progress Overview",
-                style: Theme.of(context).textTheme.titleMedium),
+            Text(
+              "نظرة عامة على التقدم",
+              style: Theme.of(context).textTheme.titleMedium,
+            ),
             const SizedBox(height: 16),
-            
+            // Add further content here.
           ],
         ),
       ),

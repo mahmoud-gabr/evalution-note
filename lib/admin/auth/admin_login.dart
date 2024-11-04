@@ -13,50 +13,53 @@ class AdminLogin extends StatefulWidget {
 }
 
 class _AdminLoginState extends State<AdminLogin> {
-  TextEditingController passwordControler = TextEditingController();
-  TextEditingController emailControler = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Admin Login'),
-          centerTitle: true,
-          backgroundColor: AppTheme.primary,
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Column(
-              children: [
-                const SizedBox(height: 32),
-                Image.asset(
-                  'assets/images/logo.png',
-                  height: MediaQuery.of(context).size.height * .25,
-                ),
-                const SizedBox(height: 64),
-                DeafaultTextFormField(
-                  controller: emailControler,
-                  label: 'Email',
-                ),
-                const SizedBox(height: 16),
-                DeafaultTextFormField(
-                  label: 'Password',
-                  controller: passwordControler,
-                ),
-                const SizedBox(height: 16),
-                DeafaultElevetedBotton(
-                  label: 'Login',
-                  onPressed: () {
-                    Navigator.pushNamed(
-                      context,
-                      AdminDashboardScreen.id,
-                    );
-                  },
-                )
-              ],
-            ),
+      appBar: AppBar(
+        title: const Text('تسجيل دخول المشرف'), 
+        centerTitle: true,
+        backgroundColor: AppTheme.primary,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            children: [
+              const SizedBox(height: 32),
+              Image.asset(
+                'assets/images/logo.png',
+                height: MediaQuery.of(context).size.height * .25,
+              ),
+              const SizedBox(height: 64),
+              DeafaultTextFormField(
+                controller: emailController,
+                label: 'البريد الإلكتروني', 
+              ),
+              const SizedBox(height: 16),
+              DeafaultTextFormField(
+                label: 'كلمة المرور', 
+                controller: passwordController,
+                isPassword: true, 
+              ),
+              const SizedBox(height: 16),
+              DeafaultElevetedBotton(
+                label: 'تسجيل دخول', 
+                onPressed: () {
+                  Navigator.pushNamed(
+                    context,
+                    AdminDashboardScreen.id,
+                  );
+                },
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }

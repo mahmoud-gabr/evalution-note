@@ -17,15 +17,15 @@ class AddUserFormScreenState extends State<AddUserFormScreen> {
   String name = '';
   String email = '';
   String password = '';
-  String selectedRole = 'Trainee';
+  String selectedRole = 'متدرب'; 
 
-  final List<String> roles = ['Admin', 'Trainer', 'Trainee'];
+  final List<String> roles = ['مدير', 'مدرب', 'متدرب']; 
 
   void _submitForm() {
     if (formKey.currentState!.validate()) {
       formKey.currentState!.save();
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('User added successfully')),
+        const SnackBar(content: Text('تم إضافة المستخدم بنجاح')), 
       );
       Navigator.pop(context);
     }
@@ -35,7 +35,7 @@ class AddUserFormScreenState extends State<AddUserFormScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Add New User'),
+        title: const Text('إضافة مستخدم جديد'), 
         centerTitle: true,
         backgroundColor: AppTheme.primary,
       ),
@@ -49,34 +49,34 @@ class AddUserFormScreenState extends State<AddUserFormScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 DeafaultTextFormField(
-                  label: 'Name',
-                  hintText: 'Enter user name',
+                  label: 'الاسم', 
+                  hintText: 'أدخل اسم المستخدم', 
                   validator: (value) =>
-                      value!.isEmpty ? 'Please enter a name' : null,
+                      value!.isEmpty ? 'يرجى إدخال اسم' : null, 
                   onChanged: (value) => name = value,
                 ),
                 const SizedBox(height: 16),
                 DeafaultTextFormField(
-                  label: 'Email',
-                  hintText: 'Enter user email',
+                  label: 'البريد الإلكتروني', 
+                  hintText: 'أدخل بريد المستخدم', 
                   validator: (value) =>
-                      value!.isEmpty ? 'Please enter an email' : null,
+                      value!.isEmpty ? 'يرجى إدخال بريد إلكتروني' : null, // "Please enter an email"
                   onChanged: (value) => email = value,
                 ),
                 const SizedBox(height: 16),
                 DeafaultTextFormField(
-                  label: 'Password',
-                  hintText: 'Enter password',
+                  label: 'كلمة المرور', 
+                  hintText: 'أدخل كلمة المرور', 
                   isPassword: true,
                   validator: (value) =>
-                      value!.isEmpty ? 'Please enter a password' : null,
+                      value!.isEmpty ? 'يرجى إدخال كلمة مرور' : null, // "Please enter a password"
                   onChanged: (value) => password = value,
                 ),
                 const SizedBox(height: 16),
                 DropdownButtonFormField<String>(
                   value: selectedRole,
                   decoration: InputDecoration(
-                    labelText: 'Role',
+                    labelText: 'الدور', 
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8.0),
                       borderSide: BorderSide(
@@ -97,7 +97,7 @@ class AddUserFormScreenState extends State<AddUserFormScreen> {
                 ),
                 const SizedBox(height: 24),
                 DeafaultElevetedBotton(
-                  label: 'Add User',
+                  label: 'إضافة مستخدم', 
                   onPressed: _submitForm,
                 ),
               ],

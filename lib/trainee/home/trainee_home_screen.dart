@@ -18,7 +18,7 @@ class TraineeHomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Dashboard'),
+        title: const Text('لوحة التحكم'),
         backgroundColor: AppTheme.primary,
         centerTitle: true,
       ),
@@ -29,14 +29,14 @@ class TraineeHomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Welcome back!",
+              "مرحبًا بعودتك!",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     fontSize: 24,
                   ),
             ),
             const SizedBox(height: 8),
             Text(
-              "Ready to reach new goals today?",
+              "هل أنت مستعد لتحقيق أهداف جديدة اليوم؟",
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     fontSize: 18,
                   ),
@@ -55,7 +55,7 @@ class TraineeHomeScreen extends StatelessWidget {
             ),
             const SizedBox(height: 24),
             Text(
-              "Your Workout Plans",
+              "خطط التمرين الخاصة بك",
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     fontSize: 18,
                   ),
@@ -68,27 +68,24 @@ class TraineeHomeScreen extends StatelessWidget {
                 physics: const BouncingScrollPhysics(),
                 children: <Widget>[
                   WorkoutCard(
-                    title: 'Plan A',
-                    description: 'Upper Body Focus',
+                    title: 'الخطة أ',
+                    description: 'تركيز على الجزء العلوي من الجسم',
                     onTap: () {
-                      Navigator.of(context)
-                          .pushNamed(WorkoutPlanDetailScreen.id);
+                      Navigator.of(context).pushNamed(WorkoutPlanDetailScreen.id);
                     },
                   ),
                   WorkoutCard(
-                    title: 'Plan B',
-                    description: 'Lower Body Focus',
+                    title: 'الخطة ب',
+                    description: 'تركيز على الجزء السفلي من الجسم',
                     onTap: () {
-                      Navigator.of(context)
-                          .pushNamed(WorkoutPlanDetailScreen.id);
+                      Navigator.of(context).pushNamed(WorkoutPlanDetailScreen.id);
                     },
                   ),
                   WorkoutCard(
-                    title: 'Plan C',
-                    description: 'Cardio Intensive',
+                    title: 'الخطة ج',
+                    description: 'تمرين مكثف للقلب',
                     onTap: () {
-                      Navigator.of(context)
-                          .pushNamed(WorkoutPlanDetailScreen.id);
+                      Navigator.of(context).pushNamed(WorkoutPlanDetailScreen.id);
                     },
                   ),
                 ],
@@ -100,14 +97,14 @@ class TraineeHomeScreen extends StatelessWidget {
               children: [
                 QuickActionButton(
                   icon: Icons.fitness_center,
-                  label: 'Start Workout',
+                  label: 'بدء التمرين',
                   onTap: () {
                     Navigator.of(context).pushNamed(StartWorkoutScreen.id);
                   },
                 ),
                 QuickActionButton(
                   icon: Icons.bar_chart,
-                  label: 'Track Progress',
+                  label: 'تتبع التقدم',
                   onTap: () {
                     Navigator.of(context).pushNamed(TrackProgressScreen.id);
                   },
@@ -117,29 +114,22 @@ class TraineeHomeScreen extends StatelessWidget {
                     Navigator.of(context).pushNamed(ViewVideosScreen.id);
                   },
                   icon: Icons.play_circle_fill,
-                  label: 'View Videos',
+                  label: 'عرض الفيديوهات',
                 ),
               ],
             ),
             const SizedBox(height: 24),
             Text(
-              "Achievements",
+              "الإنجازات",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 16),
-            const AchievementBadge(title: "50 Workouts Completed"),
-            const AchievementBadge(title: "5-Day Streak"),
-            const AchievementBadge(title: "New Personal Best"),
+            const AchievementBadge(title: "50 تمرينًا مكتملًا"),
+            const AchievementBadge(title: "سلسلة لمدة 5 أيام"),
+            const AchievementBadge(title: "أفضل مستوى شخصي جديد"),
           ],
         ),
       ),
     );
   }
 }
-
-// Custom Widgets for the Layout
-
-
-
-
-

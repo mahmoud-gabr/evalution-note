@@ -12,7 +12,7 @@ class AdminDashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Admin Dashboard'),
+        title: const Text('لوحة تحكم المشرف'),
         centerTitle: true,
         backgroundColor: AppTheme.primary,
       ),
@@ -25,7 +25,7 @@ class AdminDashboardScreen extends StatelessWidget {
                 color: AppTheme.primary,
               ),
               child: Text(
-                'Admin Menu',
+                'قائمة المشرف',
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.titleMedium!.copyWith(
                       fontSize: 24,
@@ -34,7 +34,7 @@ class AdminDashboardScreen extends StatelessWidget {
             ),
             ListTile(
               title: Text(
-                'Manage Users',
+                'إدارة المستخدمين',
                 style: Theme.of(context).textTheme.titleMedium!,
               ),
               onTap: () {
@@ -43,7 +43,7 @@ class AdminDashboardScreen extends StatelessWidget {
             ),
             ListTile(
               title: Text(
-                'Manage Workout Content',
+                'إدارة محتوى التمارين',
                 style: Theme.of(context).textTheme.titleMedium!,
               ),
               onTap: () {
@@ -52,7 +52,7 @@ class AdminDashboardScreen extends StatelessWidget {
             ),
             ListTile(
               title: Text(
-                'App Settings',
+                'إعدادات التطبيق',
                 style: Theme.of(context).textTheme.titleMedium!,
               ),
               onTap: () {
@@ -64,7 +64,7 @@ class AdminDashboardScreen extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'Welcome, Admin!',
+          'مرحبا، مشرف!',
           style: Theme.of(context).textTheme.titleMedium!.copyWith(
                 fontSize: 24,
               ),

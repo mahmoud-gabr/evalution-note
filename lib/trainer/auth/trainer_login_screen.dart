@@ -15,14 +15,13 @@ class TrainerLoginScreen extends StatefulWidget {
 
 class _TrainerLoginScreenState extends State<TrainerLoginScreen> {
   final TextEditingController emailController = TextEditingController();
-
   final TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Trainer Login'),
+        title: const Text('تسجيل دخول المدرب'),
         centerTitle: true,
         backgroundColor: AppTheme.primary,
       ),
@@ -40,17 +39,17 @@ class _TrainerLoginScreenState extends State<TrainerLoginScreen> {
               const SizedBox(height: 64),
               DeafaultTextFormField(
                 controller: emailController,
-                label: 'Email',
+                label: 'البريد الإلكتروني',
               ),
               const SizedBox(height: 16),
               DeafaultTextFormField(
                 controller: passwordController,
-                label: 'Password',
+                label: 'كلمة المرور',
                 isPassword: true,
               ),
               const SizedBox(height: 16),
               DeafaultElevetedBotton(
-                label: 'Login',
+                label: 'تسجيل الدخول',
                 onPressed: () {
                   Navigator.pushNamed(context, TrainerHomeScreen.id);
                 },

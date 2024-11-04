@@ -9,7 +9,7 @@ class StartWorkoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Start Workout"),
+        title: const Text("ابدأ التمرين"),
         backgroundColor: AppTheme.primary,
         centerTitle: true,
       ),
@@ -18,7 +18,7 @@ class StartWorkoutScreen extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Today's Workout",
+              "تمرين اليوم",
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: 16),

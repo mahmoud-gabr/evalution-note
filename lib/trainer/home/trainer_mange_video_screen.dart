@@ -14,14 +14,13 @@ class VideoManagementScreen extends StatefulWidget {
 
 class _VideoManagementScreenState extends State<VideoManagementScreen> {
   final TextEditingController videoTitleController = TextEditingController();
-
   final TextEditingController videoLinkController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Manage Videos'),
+        title: const Text('إدارة الفيديوهات'),
         backgroundColor: AppTheme.primary,
       ),
       body: Padding(
@@ -30,18 +29,18 @@ class _VideoManagementScreenState extends State<VideoManagementScreen> {
           children: [
             DeafaultTextFormField(
               controller: videoTitleController,
-              label: 'Video Title',
+              label: 'عنوان الفيديو',
             ),
             const SizedBox(height: 16),
             DeafaultTextFormField(
               controller: videoLinkController,
-              label: 'Video Link',
+              label: 'رابط الفيديو',
             ),
             const SizedBox(height: 16),
             DeafaultElevetedBotton(
-              label: 'Upload Video',
+              label: 'رفع الفيديو',
               onPressed: () {
-                // Upload video logic here
+                
               },
             ),
           ],

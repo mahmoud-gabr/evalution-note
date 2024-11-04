@@ -14,14 +14,13 @@ class TrainerProfileScreen extends StatefulWidget {
 
 class _TrainerProfileScreenState extends State<TrainerProfileScreen> {
   final TextEditingController nameController = TextEditingController();
-
   final TextEditingController bioController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: const Text('الملف الشخصي'),
         backgroundColor: AppTheme.primary,
       ),
       body: Padding(
@@ -30,19 +29,19 @@ class _TrainerProfileScreenState extends State<TrainerProfileScreen> {
           children: [
             DeafaultTextFormField(
               controller: nameController,
-              label: 'Name',
+              label: 'الاسم',
             ),
             const SizedBox(height: 16),
             DeafaultTextFormField(
               controller: bioController,
-              label: 'Bio',
+              label: 'نبذة',
               maxLines: 3,
             ),
             const SizedBox(height: 16),
             DeafaultElevetedBotton(
-              label: 'Save Profile',
+              label: 'حفظ الملف الشخصي',
               onPressed: () {
-                // Save profile logic here
+                
               },
             ),
           ],

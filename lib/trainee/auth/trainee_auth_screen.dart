@@ -43,14 +43,14 @@ class TraineeAuthScreenState extends State<TraineeAuthScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Trainee Authentication'),
+        title: const Text('تسجيل دخول المتدرب'),
         centerTitle: true,
         backgroundColor: AppTheme.primary,
         bottom: TabBar(
           controller: tabController,
           tabs: const [
-            Tab(text: 'Login'),
-            Tab(text: 'Sign Up'),
+            Tab(text: 'تسجيل دخول'),
+            Tab(text: 'إنشاء حساب'),
           ],
         ),
       ),
@@ -71,17 +71,17 @@ class TraineeAuthScreenState extends State<TraineeAuthScreen>
                   const SizedBox(height: 64),
                   DeafaultTextFormField(
                     controller: loginEmailController,
-                    label: 'Email',
+                    label: 'البريد الإلكتروني',
                   ),
                   const SizedBox(height: 16),
                   DeafaultTextFormField(
-                    label: 'Password',
+                    label: 'كلمة المرور',
                     controller: loginPasswordController,
                     isPassword: true,
                   ),
                   const SizedBox(height: 16),
                   DeafaultElevetedBotton(
-                    label: 'Login',
+                    label: 'تسجيل دخول',
                     onPressed: () {
                       Navigator.of(context).pushNamed(TraineeHomeScreen.id);
                     },
@@ -105,22 +105,22 @@ class TraineeAuthScreenState extends State<TraineeAuthScreen>
                   const SizedBox(height: 64),
                   DeafaultTextFormField(
                     controller: signupNameController,
-                    label: 'Name',
+                    label: 'الاسم',
                   ),
                   const SizedBox(height: 16),
                   DeafaultTextFormField(
                     controller: signupEmailController,
-                    label: 'Email',
+                    label: 'البريد الإلكتروني',
                   ),
                   const SizedBox(height: 16),
                   DeafaultTextFormField(
-                    label: 'Password',
+                    label: 'كلمة المرور',
                     controller: signupPasswordController,
                     isPassword: true,
                   ),
                   const SizedBox(height: 16),
                   DeafaultElevetedBotton(
-                    label: 'Sign Up',
+                    label: 'إنشاء حساب',
                     onPressed: () {},
                   ),
                 ],
